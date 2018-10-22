@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar class="borde" color=verdeMedio>
+    <ion-title >detailt</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<ion-content *ngIf="show">
+  <ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label floating >Referencia</ion-label>
+      <ion-input type="number" [(ngModel)]="articulo.ref"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating >Nombre del Producto</ion-label>
+      <ion-input type="text" [(ngModel)]="articulo.nomp"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating >Precio Unitario</ion-label>
+      <ion-input type="number" [(ngModel)]="articulo.precio"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating >Descripcion</ion-label>
+      <ion-textarea [(ngModel)]="articulo.descripcion"></ion-textarea>
+    </ion-item>
+
+    <div padding>
+      <button ion-button block color="verdeMedio" (click)="addArticulo()">Guardar Artículo</button>
+      <button  *ngIf="ref !=0" ion-button block color="rojo" (click)="delArticulo()" class="elim">Eliminar Articulo</button>
+    </div>
+
+
+  </ion-list>
+</ion-card>
+</ion-content>

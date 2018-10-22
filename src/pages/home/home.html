@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar class="borde" color=verdeMedio>
+    <ion-title >Ferreteria</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let articulo of articulos"  (click)="goToDetail(articulo.ref)">
+      {{articulo.nomp}}
+    </button>
+  </ion-list>
+  <div>
+    <button ion-button block color="verdeMedio" (click)="createArticulo()">Nuevo Articulo</button>
+  </div>
+</ion-content>

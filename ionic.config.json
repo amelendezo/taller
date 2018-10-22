@@ -1,0 +1,7 @@
+{
+  "name": "ferr",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
